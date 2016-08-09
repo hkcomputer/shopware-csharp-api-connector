@@ -12,7 +12,7 @@ namespace ShopwareApiTests
         public static ShopwareApi getDemoApi()
         {
             // URL, USERNAME, API-KEY
-            //ShopwareApi shopwareApi = new ShopwareApi("", "", "");
+            ShopwareApi shopwareApi = new ShopwareApi("", "", "");
             return shopwareApi;
         }
     }
