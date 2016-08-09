@@ -126,7 +126,7 @@
     <Compile Include="Resources\Interfaces\IOrderResource.cs" />
     <Compile Include="Resources\OrderRessource.cs" />
     <Compile Include="Resources\ShopwareApiException.cs" />
-    <Compile Include="Resources\SuperRessource.cs" />
+    <Compile Include="Resources\SuperResource.cs" />
     <Compile Include="ShopwareApi.cs" />
   </ItemGroup>
   <ItemGroup>
