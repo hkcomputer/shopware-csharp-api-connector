@@ -91,7 +91,6 @@
     <Compile Include="Models\Articles\ArticleMain.cs" />
     <Compile Include="Models\Articles\ArticleMainDetail.cs" />
     <Compile Include="Models\Articles\Attribute.cs" />
-    <Compile Include="Models\Articles\Category.cs" />
     <Compile Include="Models\Articles\ConfiguratorOption.cs" />
     <Compile Include="Models\Articles\CustomerGroup.cs" />
     <Compile Include="Models\Articles\Download.cs" />
@@ -105,23 +104,24 @@
     <Compile Include="Models\Articles\SimilarArticle.cs" />
     <Compile Include="Models\Articles\Translation.cs" />
     <Compile Include="Models\Categories\Category.cs" />
+    <Compile Include="Models\Categories\CategoryMedia.cs" />
     <Compile Include="Models\Media\Media.cs" />
-    <Compile Include="Models\Response\DefaultResponse.cs" />
-    <Compile Include="Models\Identifiable.cs" />
+    <Compile Include="Models\Response\IdentifiableResponse.cs" />
+    <Compile Include="Models\Response\Identifiable.cs" />
     <Compile Include="Models\Orders\Order.cs" />
     <Compile Include="Models\Articles\Supplier.cs" />
     <Compile Include="Models\Articles\Tax.cs" />
-    <Compile Include="Ressources\ArticleRessource.cs" />
-    <Compile Include="Ressources\Interfaces\IMediaResource.cs" />
-    <Compile Include="Ressources\MediaResource.cs" />
-    <Compile Include="Ressources\CategoryResource.cs" />
-    <Compile Include="Ressources\CustomerRessource.cs" />
-    <Compile Include="Ressources\Interfaces\IArticleRessource.cs" />
-    <Compile Include="Ressources\Interfaces\ICategoryResource.cs" />
-    <Compile Include="Ressources\Interfaces\IOrderRessource.cs" />
-    <Compile Include="Ressources\OrderRessource.cs" />
-    <Compile Include="Ressources\ShopwareApiException.cs" />
-    <Compile Include="Ressources\SuperRessource.cs" />
+    <Compile Include="Resources\ArticleRessource.cs" />
+    <Compile Include="Resources\Interfaces\IMediaResource.cs" />
+    <Compile Include="Resources\MediaResource.cs" />
+    <Compile Include="Resources\CategoryResource.cs" />
+    <Compile Include="Resources\CustomerRessource.cs" />
+    <Compile Include="Resources\Interfaces\IArticleResource.cs" />
+    <Compile Include="Resources\Interfaces\ICategoryResource.cs" />
+    <Compile Include="Resources\Interfaces\IOrderRessource.cs" />
+    <Compile Include="Resources\OrderRessource.cs" />
+    <Compile Include="Resources\ShopwareApiException.cs" />
+    <Compile Include="Resources\SuperRessource.cs" />
     <Compile Include="ShopwareApi.cs" />
   </ItemGroup>
   <ItemGroup>

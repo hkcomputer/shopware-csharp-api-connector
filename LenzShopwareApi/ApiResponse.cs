@@ -10,7 +10,7 @@ namespace Lenz.ShopwareApi
     public class ApiResponse<TData>
     {
         public TData data;
-        public Boolean success;
+        public bool success;
         public string message;
     }
 }

@@ -1,11 +1,11 @@
 ﻿using Lenz.ShopwareApi.Models.Orders;
 using System.Collections.Generic;
 
-namespace Lenz.ShopwareApi.Ressources
+namespace Lenz.ShopwareApi.Resources
 {
-    public interface IOrderRessource
-    {
-        /**
+	public interface IOrderResource
+	{
+		/**
             Get all orders (with less information).
 
             // Example start.
@@ -13,9 +13,9 @@ namespace Lenz.ShopwareApi.Ressources
             List<Order> orders = shopwareApi.getOrderRessource().getAll();
             // Example end.
         */
-        List<Order> getAll();
+		List<Order> getAll ();
 
-        /**
+		/**
             Get an order by its id.
 
             // Example start.
@@ -23,9 +23,9 @@ namespace Lenz.ShopwareApi.Ressources
             Order order = shopwareApi.getOrderRessource().get(1);
             // Example end.
         */
-        Order get(int id);
+		Order get ( int id );
 
-        /**
+		/**
             Get an order by its number.
 
             // Example start.
@@ -33,9 +33,9 @@ namespace Lenz.ShopwareApi.Ressources
             Order order = shopwareApi.getOrderRessource().get("20003?useNumberAsId=true");
             // Example end.
         */
-        Order get(string id);
+		Order get ( string id );
 
-        /**
+		/**
             Update a single order. WARNING: Only the inserted values are updated. All other values remain with the original values.
 
             // Example start.
@@ -45,6 +45,6 @@ namespace Lenz.ShopwareApi.Ressources
             shopwareApi.getOrderRessource().update(order);
             // Example end.
         */
-        void update(Order order);
-    }
+		void update ( Order order );
+	}
 }

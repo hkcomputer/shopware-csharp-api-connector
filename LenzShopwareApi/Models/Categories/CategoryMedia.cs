@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lenz.ShopwareApi.Models.Articles
+namespace Lenz.ShopwareApi.Models.Categories
 {
-	public class ArticleDetail
+	public class CategoryMedia
 	{
+		public int mediaId;
 	}
 }
