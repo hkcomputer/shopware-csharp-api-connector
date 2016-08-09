@@ -1,4 +1,6 @@
 ﻿using Lenz.ShopwareApi.Models.Articles;
+using Lenz.ShopwareApi.Models.Response;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 
@@ -12,15 +14,15 @@ namespace Lenz.ShopwareApi.Resources
 			ressourceUrl = "articles";
 		}
 
-		public new void add ( ArticleMain article )
+		public new IdentifiableResponse add ( ArticleMain article )
 		{
 			if ( article.name != null
 				&& article.mainDetail.number != null
 				&& article.supplier != null
 				&& article.tax.tax != null )
 			{
-				base.add( article );
-				return;
+				string result = base.add( article );
+				return JsonConvert.DeserializeObject<IdentifiableResponse>( result );
 			}
 			throw new Exception( "Minimum required fields for article add: article.name, article.mainDetail.number, article.supplier.name, article.tax.tax" );
 		}
@@ -33,7 +35,7 @@ namespace Lenz.ShopwareApi.Resources
 				{
 					article.mainDetail.configuratorOptions = null;
 				}
-				base.executeUpdate( article, article.id.ToString() );
+				executeUpdate( article, article.id.ToString() );
 				return;
 			}
 			throw new Exception( "Minimum required fields for article update: article.id, article.name, article.mainDetail.number, article.supplier.name, article.tax.tax" );

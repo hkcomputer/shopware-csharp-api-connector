@@ -1,4 +1,5 @@
 ﻿using Lenz.ShopwareApi.Models.Articles;
+using Lenz.ShopwareApi.Models.Response;
 using System.Collections.Generic;
 
 namespace Lenz.ShopwareApi.Resources
@@ -13,7 +14,7 @@ namespace Lenz.ShopwareApi.Resources
 
 		ArticleMain getByOrdernumber ( string ordernumber );
 
-		void add ( ArticleMain article );
+		IdentifiableResponse add ( ArticleMain article );
 
 		void update ( ArticleMain article );
 	}
