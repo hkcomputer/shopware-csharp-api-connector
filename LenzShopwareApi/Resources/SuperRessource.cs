@@ -10,6 +10,8 @@ namespace Lenz.ShopwareApi.Resources
 {
 	public abstract class SuperResource<TResponse>
 	{
+		private static readonly log4net.ILog log = log4net.LogManager.GetLogger( System.Reflection.MethodBase.GetCurrentMethod().DeclaringType );
+
 		protected string ressourceUrl;
 
 		private IRestClient client { get; set; }
