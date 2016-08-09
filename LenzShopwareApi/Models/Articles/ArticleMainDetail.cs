@@ -35,7 +35,7 @@ namespace Lenz.ShopwareApi.Models.Articles
         public string releaseDate;
         public string shippingTime;
         public List<Price> prices;
-        public Lenz.ShopwareApi.Models.Articles.Attribute attribute;
+        public Dictionary<string, string> attribute;
         public List<ConfiguratorOption> configuratorOptions;
     }
 }
