@@ -8,7 +8,6 @@ using System.Net;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using Lenz.ShopwareApi.Ressources;
-using RestSharp.Authenticators;
 
 namespace Lenz.ShopwareApi
 {
@@ -19,9 +18,10 @@ namespace Lenz.ShopwareApi
         private string password;
         private RestClient client;
 
-        private ArticleRessource articleRessource;
-        private CategoryRessource categoryRessource;
-        private OrderRessource orderRessource;
+	private ArticleResource articleResource;
+	private OrderResource orderResource;
+	private CategoryResource categoryResource;
+	private MediaResource mediaResource;
 
         public ShopwareApi(string url, string username, string password)
         {
@@ -37,34 +37,44 @@ namespace Lenz.ShopwareApi
             client.Authenticator = new DigestAuthenticator(username, password);
         }
 
-        public ArticleRessource getArticleRessource()
+        public ArticleRessource getArticleResource()
         {
-            if (this.articleRessource == null)
+            if (this.articleResource == null)
             {
-                this.articleRessource = new ArticleRessource(this.client);
+                this.articleResource = new ArticleResource(this.client);
             }
-            return this.articleRessource;
+            return this.articleResource;
         }
 
-        public ICategoryRessource getCategoryRessource()
+        public OrderRessource getOrderResource()
         {
-            if (this.categoryRessource == null)
+            if (this.orderResource == null)
             {
-                this.categoryRessource = new CategoryRessource(this.client);
+                this.orderResource = new OrderResource(this.client);
             }
-            return this.categoryRessource;
+            return this.orderResource;
         }
 
-        public OrderRessource getOrderRessource()
-        {
-            if (this.orderRessource == null)
-            {
-                this.orderRessource = new OrderRessource(this.client);
-            }
-            return this.orderRessource;
-        }
+	public CategoryResource getCategoryResource ()
+	{
+		if ( categoryResource == null )
+		{
+			categoryResource = new CategoryResource( client );
+		}
+		return categoryResource;
+	}
+
+	public MediaResource getMediaResource ()
+	{
+		if ( mediaResource == null )
+		{
+			mediaResource = new MediaResource( client );
+		}
+		return mediaResource;
+	}
     }
-    public class DigestAuthenticator : IAuthenticator
+    public class DigestAuthenticator :
+        IAuthenticator
     {
         private readonly string _user;
         private readonly string _pass;

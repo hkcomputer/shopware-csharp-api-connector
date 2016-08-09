@@ -21,10 +21,10 @@ namespace Lenz.ShopwareApi.Ressources
                     base.add(article);
                 return;
             }
-            throw new Exception("Minimum required fields for article add: article.name, article.mainDetail.number, article.supplier.name, article.tax.tax");
+            throw new Exception( "Minimum required fields for article add: article.name, article.mainDetail.number, article.supplier.name, article.tax.tax");
         }
 
-        new public void update(ArticleMain article)
+        public new void update(ArticleMain article)
         {
             if(article.id != null)
             {

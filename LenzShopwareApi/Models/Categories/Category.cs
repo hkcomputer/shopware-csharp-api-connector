@@ -9,6 +9,7 @@ namespace Lenz.ShopwareApi.Models.Categories
     public class Category
     {
         public int? id;
+	public bool active;
         public int parentId;
         public int? streamId;
         public string name;
@@ -32,10 +33,11 @@ namespace Lenz.ShopwareApi.Models.Categories
         public List<string> attribute;
         // todo: Replace object with correct type.
         public object emotions;
-        public string media;
+        public CategoryMedia media;
         // todo: Replace object with correct type.
         public List<object> customerGroups;
         public int childrenCount;
         public int articleCount;
+	public Dictionary<string, string> attribute;
     }
 }

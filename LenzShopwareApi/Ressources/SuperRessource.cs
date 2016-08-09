@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -7,11 +8,11 @@ using System.Diagnostics;
 
 namespace Lenz.ShopwareApi.Ressources
 {
-    public abstract class SuperRessource<TResponse>
-    {
-        protected String ressourceUrl;
+	public abstract class SuperRessource<TResponse>
+	{
+		protected string ressourceUrl;
 
-        protected IRestClient client { get; set; }
+        private IRestClient client { get; set; }
 
         public SuperRessource(IRestClient client) {
             this.client = client;
@@ -55,25 +56,23 @@ namespace Lenz.ShopwareApi.Ressources
             String response = this.executeAdd(data);
         }
 
-        protected String executeAdd(TResponse data)
+        protected string executeAdd(TResponse data)
         {
             String json = JsonConvert.SerializeObject(data, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
-            Debug.WriteLine(json);
             return this.execute(this.ressourceUrl, Method.POST, null, json);
         }
 
         public void update(TResponse data)
         {
-            String response = this.executeUpdate(data, "");
+            string response = this.executeUpdate(data, "");
         }
 
-        protected String executeUpdate(TResponse data, String id)
+        protected string executeUpdate(TResponse data, String id)
         {
             String json = JsonConvert.SerializeObject(data, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
-            Debug.WriteLine(json);
 
             // set id.
-            List<KeyValuePair<String, String>> parameters = new List<KeyValuePair<String, String>>();
+            List<KeyValuePair<string, string>> parameters = new List<KeyValuePair<string, string>>();
             parameters.Add(new KeyValuePair<String, String>("id", id));
             return this.execute(this.ressourceUrl + "/{id}", Method.PUT, parameters, json);
         }
@@ -116,15 +115,9 @@ namespace Lenz.ShopwareApi.Ressources
             return this.execute(this.ressourceUrl, Method.GET, parameters);
         }
 
-        private String execute(string ressource, RestSharp.Method method, List<KeyValuePair<String, String>> parameters)
+        private String execute(string ressource, RestSharp.Method method, List<KeyValuePair<string, string>> parameters)
         {
             return execute(ressource, method, parameters, "");
-        }
-
-        private String execute(ApiRequest request)
-        {
-
-            return "";
         }
 
         private String execute(string ressource, RestSharp.Method method, List<KeyValuePair<String, String>> parameters, String body)
