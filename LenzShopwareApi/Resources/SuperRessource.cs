@@ -23,15 +23,7 @@ namespace Lenz.ShopwareApi.Resources
 
 		public TResponse get ( int id )
 		{
-			try
-			{
-				return get( id.ToString() );
-			}
-			catch ( Exception e )
-			{
-				// Pass exception to next level.
-				throw e;
-			}
+			return get( id.ToString() );
 		}
 
 		public TResponse get ( string id )
