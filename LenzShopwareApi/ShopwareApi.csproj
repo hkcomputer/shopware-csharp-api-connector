@@ -86,6 +86,8 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiRequest.cs" />
+    <Compile Include="ApiRequestExecutor.cs" />
     <Compile Include="ApiResponse.cs" />
     <Compile Include="Models\Articles\ArticleDetail.cs" />
     <Compile Include="Models\Articles\ArticleMain.cs" />
@@ -104,20 +106,24 @@
     <Compile Include="Models\Articles\Translation.cs" />
     <Compile Include="Models\Categories\Category.cs" />
     <Compile Include="Models\Categories\CategoryMedia.cs" />
+    <Compile Include="Models\Downloads\Download.cs" />
+    <Compile Include="Models\Images\Image.cs" />
+    <Compile Include="Models\Links\Link.cs" />
     <Compile Include="Models\Media\Media.cs" />
     <Compile Include="Models\Response\IdentifiableResponse.cs" />
     <Compile Include="Models\Response\Identifiable.cs" />
     <Compile Include="Models\Orders\Order.cs" />
     <Compile Include="Models\Articles\Supplier.cs" />
     <Compile Include="Models\Articles\Tax.cs" />
+    <Compile Include="Models\Translations\Translation.cs" />
     <Compile Include="Resources\ArticleRessource.cs" />
     <Compile Include="Resources\Interfaces\IMediaResource.cs" />
     <Compile Include="Resources\MediaResource.cs" />
     <Compile Include="Resources\CategoryResource.cs" />
-    <Compile Include="Resources\CustomerRessource.cs" />
+    <Compile Include="Resources\CustomerResource.cs" />
     <Compile Include="Resources\Interfaces\IArticleResource.cs" />
     <Compile Include="Resources\Interfaces\ICategoryResource.cs" />
-    <Compile Include="Resources\Interfaces\IOrderRessource.cs" />
+    <Compile Include="Resources\Interfaces\IOrderResource.cs" />
     <Compile Include="Resources\OrderRessource.cs" />
     <Compile Include="Resources\ShopwareApiException.cs" />
     <Compile Include="Resources\SuperRessource.cs" />
