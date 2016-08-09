@@ -38,7 +38,9 @@ namespace Lenz.ShopwareApi.Resources
 
 		public List<TResponse> getAll ()
 		{
-			ApiResponse<List<TResponse>> response = convertResponsestringToObject<List<TResponse>>( executeGetAll() );
+			string data = executeGetAll();
+			log.Debug(data);
+			ApiResponse<List<TResponse>> response = convertResponsestringToObject<List<TResponse>>( data );
 			if ( !response.success )
 			{
 				throw new Exception( response.message );
