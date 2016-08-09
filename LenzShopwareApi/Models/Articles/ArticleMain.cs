@@ -18,9 +18,7 @@ namespace Lenz.ShopwareApi.Models.Articles
 		public string name;
 		public string description;
 		public string descriptionLong;
-
-
-
+		
 		public int pseudoSales;
 		public bool notification;
 
@@ -35,15 +33,14 @@ namespace Lenz.ShopwareApi.Models.Articles
 		public string availableTo;
 
 		/* seo */
-		public String keywords;
-		public String metaTitle;
+		public string keywords;
+		public string metaTitle;
 		/* history */
-		public String added;
-		public String changed;
+		public string added;
+		public string changed;
 		/* price */
 		public bool priceGroupActive;
-
-
+		
 		public List<PropertyValue> propertyValues;
 
 		public ArticleMainDetail mainDetail = new ArticleMainDetail();
@@ -53,9 +50,8 @@ namespace Lenz.ShopwareApi.Models.Articles
 		public PropertyGroup propertyGroup;
 		public List<CustomerGroup> customerGroups;
 		public List<Image> images;
-
-
-		public String configuratorSet;
+		
+		public string configuratorSet;
 		public List<Link> links;
 		public List<Download> downloads;
 
