@@ -20,7 +20,7 @@ namespace Lenz.ShopwareApi.Models.Articles
 		public string name;
 		public string description;
 		public string descriptionLong;
-		
+
 		public int pseudoSales;
 		public bool notification;
 
@@ -42,7 +42,7 @@ namespace Lenz.ShopwareApi.Models.Articles
 		public string changed;
 		/* price */
 		public bool priceGroupActive;
-		
+
 		public List<PropertyValue> propertyValues;
 
 		public ArticleMainDetail mainDetail = new ArticleMainDetail();
@@ -52,7 +52,7 @@ namespace Lenz.ShopwareApi.Models.Articles
 		public PropertyGroup propertyGroup;
 		public List<CustomerGroup> customerGroups;
 		public List<Image> images;
-		
+
 		public string configuratorSet;
 		public List<Link> links;
 		public List<Download> downloads;
