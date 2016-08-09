@@ -15,6 +15,8 @@ namespace Lenz.ShopwareApi.Models.Articles
 		public int? filterGroupId;
 		public int? configuratorSetId;
 
+		public int supplierId;
+
 		public string name;
 		public string description;
 		public string descriptionLong;
@@ -62,5 +64,7 @@ namespace Lenz.ShopwareApi.Models.Articles
 		public List<SimilarArticle> similar;
 		public List<RelatedArticle> related;
 		public List<Translation> translations;
+
+		public Dictionary<string, string> attribute;
 	}
 }
